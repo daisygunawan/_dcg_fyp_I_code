@@ -1,0 +1,67 @@
+# config_proto.yaml
+# Configuration for TCGA-BRCA Network Rewiring Prototype
+# Updated for smaller dataset (25 tumor vs 5 normal)
+
+# Source data paths (relative to prototype directory)
+source_data:
+  # Path to full preprocessed matrices from main pipeline
+  matrices_dir: "../output/00_b_data_preprocess/matrices"
+  tumor_matrix_file: "tumor_matrix.tsv"
+  normal_matrix_file: "normal_matrix.tsv"
+
+# Sample selection parameters for Step 0 (subset creation)
+sampling:
+  n_tumor: 120          # Number of tumor samples to extract from full dataset
+  n_normal: 40          # Number of normal samples to extract from full dataset
+  random_seed: 42       # For reproducibility across runs
+
+# Network analysis parameters
+network:
+  correlation_method: "spearman"   # Primary correlation method
+  correlation_threshold: 0.7       # Edge threshold for network construction
+  
+# Differential analysis parameters
+differential:
+  fdr_threshold: 0.05              # False discovery rate cutoff
+  min_effect_size: 0.1             # Minimum |delta_r| for significance
+  volcano_max_points: 1500000      # Target points for volcano sampling
+
+# Hub identification parameters
+hubs:
+  top_k: 50                        # Number of top hubs to identify
+  top_k_visualize: 3               # Number of hubs for graph comparison
+  selection_mode: "visual"         # Hub selection: 'top', 'moderate', 'median', 'percentile', 'visual'
+  percentile_range: [55, 70]       # Used when selection_mode='percentile': [lower, upper] percentile bounds
+
+# Subgraph extraction parameters
+subgraph:
+  max_neighbors: 50                # Maximum neighbors per hub (for clarity)
+  
+# Visualization parameters
+visualization:
+  dpi: 300                         # Resolution for saved plots
+  figure_format: "png"             # Output format
+
+# Input/Output paths
+paths:
+  input_matrices: "input/preprocessed/matrices"
+  output_base: "output"
+  log_file: "output/prototype_execution.log"
+
+# Performance notes:
+# With 25 tumor + 5 normal samples:
+# - Step 0: ~20 sec (creates ~8 MB subset files from 300+ MB source)
+# - Step 1: ~30 sec (correlation computation)
+# - Step 2: ~90 sec (differential analysis)
+# - Step 3: ~5 sec (subgraph extraction)
+# - Step 4: ~20 sec (visualization)
+# Total: ~3 minutes on standard laptop
+#
+# To adjust sample sizes:
+# - Increase n_tumor/n_normal for more statistical power (longer runtime)
+# - Decrease for faster prototyping (less power)
+# - Keep ratio ~5:1 (tumor:normal) to match dataset proportions
+#
+# To use different source data:
+# - Change source_data.matrices_dir to point to your preprocessed matrices
+# - Ensure tumor_matrix_file and normal_matrix_file exist in that directory

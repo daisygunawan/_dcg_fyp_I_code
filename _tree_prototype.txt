@@ -1,0 +1,119 @@
+[5.1G]  .
+├── [ 38M]  input
+│   └── [ 38M]  preprocessed
+│       └── [ 38M]  matrices
+│           ├── [9.6M]  normal_matrix.tsv
+│           ├── [2.8K]  subset_metadata.json
+│           └── [ 28M]  tumor_matrix.tsv
+├── [5.1G]  output
+│   ├── [1.0G]  correlation_matrices
+│   │   ├── [435M]  normal_corr_proto.npz
+│   │   ├── [2.2K]  sample_info.json
+│   │   └── [609M]  tumor_corr_proto.npz
+│   ├── [4.1G]  differential_results
+│   │   ├── [608K]  differential_connectivity.tsv
+│   │   ├── [4.1G]  differential_pairs_significant.tsv
+│   │   ├── [ 650]  summary_stats.json
+│   │   └── [ 13K]  top_hubs.json
+│   ├── [1.5M]  hub_subgraphs
+│   │   ├── [ 38K]  ENSG00000013588.9|GPRC5A_normal.pkl
+│   │   ├── [ 560]  ENSG00000013588.9|GPRC5A_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000065154.12|OAT_normal.pkl
+│   │   ├── [ 256]  ENSG00000065154.12|OAT_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000070761.8|CFAP20_normal.pkl
+│   │   ├── [1.8K]  ENSG00000070761.8|CFAP20_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000074201.9|CLNS1A_normal.pkl
+│   │   ├── [4.6K]  ENSG00000074201.9|CLNS1A_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000100304.13|TTLL12_normal.pkl
+│   │   ├── [ 965]  ENSG00000100304.13|TTLL12_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000101544.9|ADNP2_normal.pkl
+│   │   ├── [ 28K]  ENSG00000101544.9|ADNP2_tumor.pkl
+│   │   ├── [ 35K]  ENSG00000109775.11|UFSP2_normal.pkl
+│   │   ├── [ 17K]  ENSG00000109775.11|UFSP2_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000115641.19|FHL2_normal.pkl
+│   │   ├── [ 846]  ENSG00000115641.19|FHL2_tumor.pkl
+│   │   ├── [ 36K]  ENSG00000120784.16|ZFP30_normal.pkl
+│   │   ├── [ 13K]  ENSG00000120784.16|ZFP30_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000123352.18|SPATS2_normal.pkl
+│   │   ├── [ 414]  ENSG00000123352.18|SPATS2_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000124535.16|WRNIP1_normal.pkl
+│   │   ├── [7.0K]  ENSG00000124535.16|WRNIP1_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000125485.17|DDX31_normal.pkl
+│   │   ├── [ 437]  ENSG00000125485.17|DDX31_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000125871.14|MGME1_normal.pkl
+│   │   ├── [9.0K]  ENSG00000125871.14|MGME1_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000128165.9|ADM2_normal.pkl
+│   │   ├── [ 256]  ENSG00000128165.9|ADM2_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000137055.15|PLAA_normal.pkl
+│   │   ├── [ 412]  ENSG00000137055.15|PLAA_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000138668.19|HNRNPD_normal.pkl
+│   │   ├── [ 20K]  ENSG00000138668.19|HNRNPD_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000141934.10|PLPP2_normal.pkl
+│   │   ├── [ 258]  ENSG00000141934.10|PLPP2_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000143217.9|NECTIN4_normal.pkl
+│   │   ├── [6.6K]  ENSG00000143217.9|NECTIN4_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000148985.20|PGAP2_normal.pkl
+│   │   ├── [3.7K]  ENSG00000148985.20|PGAP2_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000151498.12|ACAD8_normal.pkl
+│   │   ├── [ 763]  ENSG00000151498.12|ACAD8_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000152939.17|MARVELD2_normal.pkl
+│   │   ├── [ 25K]  ENSG00000152939.17|MARVELD2_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000159202.18|UBE2Z_normal.pkl
+│   │   ├── [ 22K]  ENSG00000159202.18|UBE2Z_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000162522.11|KIAA1522_normal.pkl
+│   │   ├── [6.6K]  ENSG00000162522.11|KIAA1522_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000162851.8|TFB2M_normal.pkl
+│   │   ├── [ 497]  ENSG00000162851.8|TFB2M_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000163161.14|ERCC3_normal.pkl
+│   │   ├── [3.7K]  ENSG00000163161.14|ERCC3_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000174796.12|THAP6_normal.pkl
+│   │   ├── [4.3K]  ENSG00000174796.12|THAP6_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000177239.15|MAN1B1_normal.pkl
+│   │   ├── [ 16K]  ENSG00000177239.15|MAN1B1_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000187796.15|CARD9_normal.pkl
+│   │   ├── [ 258]  ENSG00000187796.15|CARD9_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000196652.12|ZKSCAN5_normal.pkl
+│   │   ├── [ 17K]  ENSG00000196652.12|ZKSCAN5_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000196724.13|ZNF418_normal.pkl
+│   │   ├── [1.0K]  ENSG00000196724.13|ZNF418_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000198218.11|QRICH1_normal.pkl
+│   │   ├── [ 22K]  ENSG00000198218.11|QRICH1_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000203995.10|ZYG11A_normal.pkl
+│   │   ├── [ 990]  ENSG00000203995.10|ZYG11A_tumor.pkl
+│   │   ├── [ 38K]  ENSG00000275835.5|TUBGCP5_normal.pkl
+│   │   └── [ 838]  ENSG00000275835.5|TUBGCP5_tumor.pkl
+│   ├── [7.4M]  visualizations
+│   │   ├── [201K]  01_volcano_plot.png
+│   │   ├── [269K]  02_hub_ranking_bar.png
+│   │   ├── [446K]  03_connectivity_scatter.png
+│   │   ├── [5.9M]  04_hub_comparison_grid.png
+│   │   ├── [460K]  05_connectivity_distribution.png
+│   │   └── [112K]  06_rewiring_zones.png
+│   ├── [ 22K]  prototype_execution copy 2.log
+│   ├── [ 22K]  prototype_execution copy 3.log
+│   ├── [ 22K]  prototype_execution copy 4.log
+│   ├── [ 22K]  prototype_execution copy 5.log
+│   ├── [ 22K]  prototype_execution copy 6.log
+│   ├── [ 47K]  prototype_execution copy 7.log
+│   ├── [ 22K]  prototype_execution copy 8.log
+│   ├── [ 22K]  prototype_execution copy.log
+│   └── [ 23K]  prototype_execution.log
+├── [ 80K]  scripts
+│   ├── [9.8K]  proto_00_create_subset.py
+│   ├── [ 10K]  proto_01_prepare_data.py
+│   ├── [ 23K]  proto_02_differential.py
+│   ├── [8.3K]  proto_03_build_subgraphs.py
+│   ├── [ 17K]  proto_04_visualize.py
+│   └── [ 11K]  proto_05_diagnostic.py
+├── [1.4K]  _defense_related.md
+├── [   0]  _tree_prototype.txt
+├── [ 120]  _tree.sh
+├── [2.5K]  config_proto.yaml
+├── [ 11K]  README_PROTOTYPE.md
+├── [ 337]  requirements_proto.txt
+├── [2.6K]  run_all_prototype.bat
+├── [2.7K]  run_all_prototype.sh
+├── [2.0K]  setup_prototype.bat
+└── [2.3K]  setup_prototype.sh
+
+ 5.1G used in 10 directories, 107 files
